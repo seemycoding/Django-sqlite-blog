@@ -1,0 +1,54 @@
+{% extends 'blog/layout.htm' %} {% block content %}
+<div class="container mt-5 mr-5 ml-5">
+  <form method="POST" action="{% url 'add' %}">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="exampleFormControlInput1"><h3>Title</h3></label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        placeholder="Enter Title"
+        required="True"
+        maxlength="50"
+      />
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1"><h3>Category</h3></label>
+      <select class="form-control" name="category">
+        <option>Gaming</option>
+        <option>Web Development</option>
+        <option>Android Development</option>
+        <option>IOS Development</option>
+        <option>Movies</option>
+        <option>Songs</option>
+        <option>Acting</option>
+        <option>Tips and Tricks</option>
+        <option>Cooking</option>
+        <option>Computer</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="exampleFormControlTextarea1"><h3>Body</h3></label>
+      <textarea
+        class="form-control"
+        name="body"
+        rows="8"
+        required="True"
+        maxlength="255"
+      ></textarea>
+    </div>
+    <div class="well">
+      <input
+        type="submit"
+        name="SignUp"
+        id="signup"
+        value="Post"
+        class="btn btn-primary"
+      />
+    </div>
+  </form>
+</div>
+
+{% endblock %}

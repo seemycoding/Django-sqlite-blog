@@ -1,0 +1,14 @@
+{% extends 'blog/layout.htm' %} {% block content %}
+<div class="container"><h1>View Post</h1></div>
+{% for post in posts %}
+<main role="main" class="container">
+  <div class="jumbotron">
+    <h1>{{ post.titile }}</h1>
+    <p class="lead">{{ post.category }}</p>
+    <a class="btn btn-lg btn-primary" href="{% url 'details' post.id %}" role="button"
+      >Read More &raquo;</a
+    >
+  </div>
+</main>
+
+{% endfor %} {% endblock %}

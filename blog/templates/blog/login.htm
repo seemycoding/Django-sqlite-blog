@@ -1,0 +1,18 @@
+{% extends 'blog/layout.htm' %} {% block content %}
+<div class="container mt-5 mr-5 ml-5">
+  <h1>Login</h1>
+  <form action="{% url 'login' %}" method="POST">
+    {% csrf_token %} {% load crispy_forms_tags %} {{ form | crispy }}
+    <div class="well mt-3">
+      <input
+        type="submit"
+        name="SignUp"
+        id="signup"
+        value="Login"
+        class="btn btn-primary"
+      />
+    </div>
+  </form>
+</div>
+
+{% endblock %}

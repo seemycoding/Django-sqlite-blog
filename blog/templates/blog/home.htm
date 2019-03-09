@@ -1,0 +1,17 @@
+{% extends 'blog/layout.htm' %} {% block content %}
+<div class="jumbotron text-center">
+  <h1 class="display-4">Welcome to Blog Application!</h1>
+  <p class="lead">
+    We provide you one place to show your skills wether it is your article,
+    story or quotes one place for all.
+  </p>
+  <hr class="my-4" />
+  <p>Create Your blog here and show your content to world</p>
+  <a class="btn btn-primary btn-lg" href="{% url 'register' %}" role="button"
+    >Register</a
+  >
+  <a class="btn btn-dark btn-lg" href="{% url 'login' %}" role="button"
+    >Login</a
+  >
+</div>
+{% endblock %}
